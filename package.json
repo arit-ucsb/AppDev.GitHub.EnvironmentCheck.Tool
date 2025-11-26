@@ -1,0 +1,20 @@
+{
+  "name": "@arit-ucsb/github-environmentcheck-tool",
+  "version": "1.0.0",
+  "description": "When your workflow runs this step, it will fail the workflow unless the GitHub environments you specify have been added to your repository.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arit-ucsb/AppDev.GitHub.EnvironmentCheck.Tool.git"
+  },
+  "keywords": ["github", "actions", "environment", "check"],
+  "author": "Eric Rushing",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/arit-ucsb/AppDev.GitHub.EnvironmentCheck.Tool/issues"
+  },
+  "homepage": "https://github.com/arit-ucsb/AppDev.GitHub.EnvironmentCheck.Tool#readme"
+}

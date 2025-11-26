@@ -1,0 +1,14 @@
+name: '@arit-ucsb/github-environmentcheck-tool'
+description: 'When your workflow runs this step, it will fail the workflow unless the GitHub environments you specify have been added to your repository.'
+
+inputs:
+  environment-names:
+    description: 'List environment names to check for. One per line.'
+    required: true
+    default: |
+      production
+      staging
+
+runs:
+  using: node20
+  main: 'index.js'
