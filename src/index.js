@@ -18,11 +18,7 @@ async function run() {
     core.info(`Checking for environments: ${environmentNames.join(', ')}`);
 
     const { owner, repo } = github.context.repo;
-    const token = process.env.GITHUB_TOKEN;
-    if (!token) {
-      core.setFailed('GITHUB_TOKEN is not set. Please ensure the action has access to a GitHub token.');
-      return;
-    }
+    const token = core.getInput('github-token', { required: true });
 
     const octokit = github.getOctokit(token);
 
