@@ -9,7 +9,7 @@ inputs:
       production
       staging
   github-token:
-    description: 'GitHub token with repo access (you can use `${{ secrets.GITHUB_TOKEN }}`)'
+    description: 'GitHub token with repo access (you can use `secrets.GITHUB_TOKEN`)'
     required: true
 
 runs:
