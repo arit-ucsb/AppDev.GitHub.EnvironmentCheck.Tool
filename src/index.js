@@ -28,7 +28,7 @@ async function run() {
 
     let environments = [];
     try {
-      const response = await octokit.rest.repos.getAllEnvironments({ owner, repo, });
+      const response = await octokit.rest.repos.getAllEnvironments({ owner, repo });
       environments = response.data.environments.map(env => env.name);
       core.info(`Found ${environments.length} environment(s) in the repository`);
     } catch (error) {
