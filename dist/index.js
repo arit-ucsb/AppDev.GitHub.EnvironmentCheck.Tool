@@ -31902,17 +31902,13 @@ async function run() {
     _actions_core__WEBPACK_IMPORTED_MODULE_0__.info(`Checking for environments: ${environmentNames.join(', ')}`);
 
     const { owner, repo } = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.repo;
-    const token = process.env.GITHUB_TOKEN;
-    if (!token) {
-      _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed('GITHUB_TOKEN is not set. Please ensure the action has access to a GitHub token.');
-      return;
-    }
+    const token = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('github-token', { required: true });
 
     const octokit = _actions_github__WEBPACK_IMPORTED_MODULE_1__.getOctokit(token);
 
     let environments = [];
     try {
-      const response = await octokit.rest.repos.getAllEnvironments({ owner, repo, });
+      const response = await octokit.rest.repos.getAllEnvironments({ owner, repo });
       environments = response.data.environments.map(env => env.name);
       _actions_core__WEBPACK_IMPORTED_MODULE_0__.info(`Found ${environments.length} environment(s) in the repository`);
     } catch (error) {
