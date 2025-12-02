@@ -1,5 +1,5 @@
 name: '@arit-ucsb/github-environmentcheck-tool'
-description: 'When your workflow runs this step, it will fail the workflow unless the GitHub environments you specify have been added to your repository.'
+description: 'This workflow step will fail if any of the specified GitHub Environments do not exist in the repository.'
 
 inputs:
   environment-names:
