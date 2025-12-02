@@ -25,7 +25,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # List the required environments here, one per line
-          environments: |
+          environment-names: |
             development
             staging
             production
