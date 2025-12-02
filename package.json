@@ -1,10 +1,9 @@
 {
   "name": "@arit-ucsb/github-environmentcheck-tool",
   "version": "1.0.0",
-  "description": "When your workflow runs this step, it will fail the workflow unless the GitHub environments you specify have been added to your repository.",
+  "description": "This is a GitHub action workflow step that will fail if any of the specified GitHub Environments do not exist in the repository.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "ncc build src/index.js -o dist"
   },
   "repository": {

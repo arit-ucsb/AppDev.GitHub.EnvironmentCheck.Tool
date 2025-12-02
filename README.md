@@ -34,3 +34,6 @@ jobs:
     needs: check-environments
     ... # Your deployment job here
 ```
+
+## Development
+Modify the code in the `src` folder, and run `npm ci`, `npm run build` to compile the project before testing or releasing.
