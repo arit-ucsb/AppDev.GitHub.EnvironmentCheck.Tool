@@ -4,7 +4,7 @@
 This action checks for the existence of GitHub environments in the calling repository.
 If any of the specified environments do not exist, the action will fail, otherwise it will succeed.
 
-It was created becuase the default GitHub behavior is to create environments on-the-fly when they are referenced in a workflow.
+It was created because the default GitHub behavior is to create environments on-the-fly when they are referenced in a workflow.
 This isn't necessarily suitable, because environments are often used to enforce specific deployment policies,
 and creating them automatically will bypass these policies.
 
