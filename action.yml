@@ -1,0 +1,17 @@
+name: '@arit-ucsb/github-environmentcheck-tool'
+description: 'This workflow step will fail if any of the specified GitHub Environments do not exist in the repository.'
+
+inputs:
+  environment-names:
+    description: 'List environment names to check for. One per line.'
+    required: true
+    default: |
+      production
+      staging
+  github-token:
+    description: 'GitHub token with repo access (you can use `secrets.GITHUB_TOKEN`)'
+    required: true
+
+runs:
+  using: node20
+  main: 'dist/index.js'

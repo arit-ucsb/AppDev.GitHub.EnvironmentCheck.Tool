@@ -1,5 +1,39 @@
-# Repo name goes here
+# AppDev.GitHub.EnvironmentCheck.Tool
 
-Add a short description here but it is best to put most info in Confluence.
+## Description
+This action checks for the existence of GitHub environments in the calling repository.
+If any of the specified environments do not exist, the action will fail, otherwise it will succeed.
 
-[Link to a Confluence page for more information](https://ucsb-atlas.atlassian.net/wiki/)
+It was created because the default GitHub behavior is to create environments on-the-fly when they are referenced in a workflow.
+This isn't necessarily suitable, because environments are often used to enforce specific deployment policies,
+and creating them automatically will bypass these policies.
+
+If you have a one-off workflow to guard, it's utility is limited because it's easier just to manually configure the environments
+appropriately while you're thinking of it. However, it can be useful in a reusable workflow or template scenario
+where all consuming projects automatically make use of the guarded workflow.
+
+## Usage
+To use this action, include it in your GitHub Actions workflow as follows:
+
+```yaml
+jobs:
+  check-environments:
+    runs-on: ubuntu-latest # (or the runner of your choice)
+    steps:
+      - name: Check Environments
+        uses: arit-ucsb/AppDev.GitHub.EnvironmentCheck.Tool@AWEBAPPS-7697
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # List the required environments here, one per line
+          environment-names: |
+            development
+            staging
+            production
+
+  deploy:
+    needs: check-environments
+    ... # Your deployment job here
+```
+
+## Development
+Modify the code in the `src` folder, and run `npm ci`, `npm run build` to compile the project before testing or releasing.

@@ -1,0 +1,30 @@
+{
+  "name": "@arit-ucsb/github-environmentcheck-tool",
+  "version": "1.0.0",
+  "description": "This is a GitHub action workflow step that will fail if any of the specified GitHub Environments do not exist in the repository.",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arit-ucsb/AppDev.GitHub.EnvironmentCheck.Tool.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "environment",
+    "check"
+  ],
+  "author": "Eric Rushing",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/arit-ucsb/AppDev.GitHub.EnvironmentCheck.Tool/issues"
+  },
+  "homepage": "https://github.com/arit-ucsb/AppDev.GitHub.EnvironmentCheck.Tool#readme",
+  "devDependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
+    "@vercel/ncc": "^0.38.4"
+  }
+}
