@@ -17,7 +17,7 @@
     "check"
   ],
   "author": "Eric Rushing",
-  "license": "UNLICENSED",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/arit-ucsb/AppDev.GitHub.EnvironmentCheck.Tool/issues"
   },
