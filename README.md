@@ -38,6 +38,9 @@ jobs:
 ## Development
 Modify the code in the `src` folder, and run `npm ci`, `npm run build` to compile the project before testing or releasing.
 
+## Issues
+https://github.com/arit-ucsb/AppDev.GitHub.EnvironmentCheck.Tool/issues
+
 ## License
 Copyright Regents of the University of California
 
